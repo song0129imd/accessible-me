@@ -13,62 +13,75 @@
 </head>
 
 <body>
+  <ul class="skip-links">
+    <li><a href="#nav">Skip to main nav</a></li>
+    <li><a href="#main">Skip to main content</a></li>
+  </ul>
   <div class="container">
-    <ul class="skip-links">
-      <li><a href="#nav">Skip to main nav</a></li>
-      <li><a href="#main">Skip to main content</a></li>
-    </ul>
-    <div class="site-header">
+    
+    <header class="site-header" role="banner">
       <h1>Jam Box Studios</h1>
-      <div class="main-nav">
-        <nav>
+      <nav class="main-nav" id="nav" role="navigation">
+        
           <ul>
-            <li><a href="#" aria-label="Home">Home</a></li>
+            <li><a href="#" aria-label="go to Homepage">Home</a></li>
             <li><a href="#" aria-label="Products">Products</a></li>
-            <li><a href="#" aria-label="Reservation">Reservation</a></li>
-            <li><a href="#" aria-label="Studio">Studio</a></li>
+            <li><a href="#" aria-label="Reserve your table">Reservation</a></li>
+            <li><a href="#" aria-label="visit our Studio">Studio</a></li>
         </ul>
-        </nav>
-      </div>
+        
+      </nav>
       <img src="https://placekitten.com/1200/900" class="banner" alt="kitten">
-    </div>
-    <main class="main-content">
+    </header>
+    <main class="main-content" id="main">
       <h1 role="banner">Welcome to Jam Box</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-      <div class="owner">
-        <h2>Meet the owner</h2>
-        <ul itemscope itemtype="https://schema.org/Person">
-          <li itemprop="name">Name: John Doe</li>
-          <li itemprop="jobTitle">Title: CEO</li>
-          <li itemprop="email">Email: johnjoe@jambox.ca</li>
-          <li itemprop="telephone">Phone: 613-000-0000</li>
+      <section class="owner" itemscope itemtype="https://schema.org/Person">
+        <h3>Meet the owner</h3>
+        <dl>
+          <dt itemprop="name">Name:</dt>
+          <dd>John Doe</dd>
+          <dd itemprop="jobTitle">Title: </dd>
+            <dt>CEO</dt>
+            
+          <dd itemprop="email">Email: 
+            <dt>johnjoe@jambox.ca</dt>
+          <dd itemprop="telephone">Phone: 
+            <dt></dt>613-000-0000</li>
         </ul>
-        <h2 role="complementary">Address</h2>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
-        </p>
+        <h4 role="complementary">Address</h4>
+        <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <span itemprop="name">Jambox Studios</span>
+          <span itemprop="streetAddress">123 Guitar Road,</span>
+          <span itemprop="addressLocality">Musicville, Danceistan</span>
+          <span itemprop="postalCode">B3T 0L0</span>
+        </address>
       </main>
-      <div class="contact-section">
-        <h2 role="contentinfo">Contact Us</h2>
+      <section class="contact-section">
+        <h3 role="contentinfo">Contact Us</h3>
         <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
+          <label for="firstname">Full Name</label>
+          <input type="text" placeholder="Full Name" id="firstname" name="fullname">
+
+          <label for="email">Your Email</label>
+          <input type="email" placeholder="Email" id="email" name="email">
+
+          <label for="subject">Subject</label>
+          <input type="text" placeholder="Subject" id="subject" name="subject">
+
+          <label for="message">Your Message</label>
+          <textarea id="message"></textarea>
+          
           <button type="submit">Send</button>
         </form>
       </div>
     </div>
     <footer class="site-footer">
-      &copy; 2021 Jam Box Studios
+      <p>&copy; 2021 Jam Box Studios</p>
     </footer>
-  </div>
+  </div> 
+  <!-- closing container -->
 </body>
 
 </html>
